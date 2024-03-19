@@ -16,7 +16,6 @@ public class AlturaAlumno { // Recorrer dos arrays con la misma longitud
         boolean salir = false;
         int opcion = 0;
 
-
         // BUCLE MENU
         while (!salir)
         {
