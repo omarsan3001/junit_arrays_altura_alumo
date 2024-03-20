@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AlturaAlumnoTest {
         @Test
         void verdadero(){
-            assertTrue(1==1);
+            assertEquals(1, 1);
         }
 
         @Test
@@ -31,8 +31,8 @@ public class AlturaAlumnoTest {
 
         @Test
         void modificaAlturaTest3(){
-            double array[] = new double[10];
-            double arrayCopy[];
+            double[] array = new double[10];
+            double[] arrayCopy;
             int position = 3;
             double altura = 20;
 
@@ -50,41 +50,41 @@ public class AlturaAlumnoTest {
         }
         @Test
         void buscaNombreTest(){
-            String array[] = new String[] {"ana","pepe","rodrigo"};
+            String[] array = new String[] {"ana","pepe","rodrigo"};
             String nombre = "pepe";
             assertEquals(1,AlturaAlumno.buscaNombre(array,nombre));
         }
         @Test
         void buscaNombreTestVacio(){
-            String array[] = new String[] {"ana","pepe","rodrigo"};
+            String[] array = new String[] {"ana","pepe","rodrigo"};
             assertEquals(-1,AlturaAlumno.buscaNombre(array," "));
             assertEquals(-1,AlturaAlumno.buscaNombre(array,null));
         }
         @Test
         void mostrarTestFallo(){
-            String arrayNombre[] = new String[]{"a","b","c"};
-            double arrayAltura[] = new double[]{1,2};
+            String[] arrayNombre = new String[]{"a","b","c"};
+            double[] arrayAltura = new double[]{1,2};
 
             assertThrows(ArrayIndexOutOfBoundsException.class,() -> AlturaAlumno.mostrar(arrayNombre,arrayAltura));
         }
         @Test
         void mostrarTestCorrecto(){
-            String arrayNombre[] = new String[]{"a","b","c"};
-            double arrayAltura[] = new double[]{1,2,3};
+            String[] arrayNombre = new String[]{"a","b","c"};
+            double[] arrayAltura = new double[]{1,2,3};
 
             assertDoesNotThrow(() -> AlturaAlumno.mostrar(arrayNombre,arrayAltura));
         }
 
         @Test
         void calculaMaximoTest(){
-            double array[] = new double[]{1,2,3};
+            double[] array = new double[]{1,2,3};
 
             assertEquals(2,AlturaAlumno.calculaMaximo(array)[0]);
             assertEquals(3,AlturaAlumno.calculaMaximo(array)[1]);
         }
         @Test
         void calculaMediaTest(){
-            double array[] = new double[]{0,10};
+            double[] array = new double[]{0,10};
 
             assertEquals(5,AlturaAlumno.calculaMedia(array));
         }
