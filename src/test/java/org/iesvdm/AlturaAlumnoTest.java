@@ -94,6 +94,7 @@ public class AlturaAlumnoTest {
 
             assertEquals(0,AlturaAlumno.calculaMedia(array));
 
+
         }
 
     }
