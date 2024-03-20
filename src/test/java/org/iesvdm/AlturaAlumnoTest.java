@@ -88,6 +88,13 @@ public class AlturaAlumnoTest {
 
             assertEquals(5,AlturaAlumno.calculaMedia(array));
         }
+        @Test
+        void calculaMediaTestVacio(){
+            double[] array = new double[]{};
+
+            assertEquals(0,AlturaAlumno.calculaMedia(array));
+
+        }
 
     }
 
